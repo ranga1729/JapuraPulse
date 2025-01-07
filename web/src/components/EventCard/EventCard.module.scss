@@ -1,10 +1,15 @@
-.eventItemContainer {
-  border: 1px solid rgb(238, 241, 246);
-  padding: 8px 0px 0px 0px;
-  border-radius: 10px;
+$primaryColor : #1259f3;
+@mixin flexCenter {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.eventItemContainer {
+  @include flexCenter;
+  border: 1px solid rgb(238, 241, 246);
+  padding: 8px 0px 0px 0px;
+  border-radius: 10px;
   height: 400px;
   width: 250px;
   box-sizing: border-box;
@@ -83,7 +88,7 @@
   margin: 0 0 0 8px;
   height: 30px;
   font-weight: 700;
-  color: #1259f3;
+  color: $primaryColor;
 }
 
 .ticketBuyButton {
@@ -93,13 +98,13 @@
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   height: 40px;
-  background-color: #1259f3;
+  background-color: $primaryColor;
   color: white;
   font-weight: 500;
 }
 .ticketBuyButton:hover {
   text-shadow: 0px 0px 2px rgb(197, 209, 31, 0.5);
-  box-shadow: 0px 0px 3px 1px #1259f3;
+  box-shadow: 0px 0px 3px 1px $primaryColor;
   transition-timing-function: cubic-bezier(.4,0,.2,1);
   transition-duration: .15s;
 }

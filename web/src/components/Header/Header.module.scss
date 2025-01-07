@@ -1,0 +1,90 @@
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap');
+
+$primaryBlue : rgb(103, 120, 255);
+$primaryRed : rgb(234, 93, 97);
+$primaryGreen : rgb(70, 209, 72);
+$coolGray : rgb(161, 164, 187);
+$frenchGray : rgb(178, 193, 201);
+$white : rgb(254, 254, 254);
+
+$primaryBlue_hover : rgb(84, 101, 236);
+$primaryRed_hover : rgb(215, 74, 78);
+$primaryGreen_hover : rgb(51, 190, 53);
+
+.HeaderContainer {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: $white;
+  height: 3rem;
+  width: 100%;
+
+  .logoContainer {
+    img {
+      height: 40px;
+    }
+  }
+
+  .nameContainer {
+    @include flexCenter;
+    font-weight: 500;
+    width: 100%;
+
+    p {
+      font-family: "Roboto", serif;
+      font-optical-sizing: auto;
+      font-weight: bold;
+      font-style: normal;
+      font-size: 1.9rem;
+      color: rgb(133, 114, 114);
+    }
+  }
+
+  .buttonContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+
+    button {
+      all: unset;
+      min-width: 4rem;
+      padding: 0.5rem 0.7rem 0.5rem 0.7rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      color: white;
+      font-weight: 400;
+    }
+
+    .register {
+      background-color: $primaryGreen;
+      &:hover {
+        background-color: $primaryGreen_hover;
+        box-shadow: 1px 1px 3px 1px rgba($primaryBlue, 0.5);
+        transition-timing-function: cubic-bezier(.4,0,.2,1);
+        transition-duration: .15s;
+      }
+    }
+
+    .login {
+      background-color: $primaryBlue;
+      &:hover {
+        background-color: $primaryBlue_hover;
+        box-shadow: 1px 1px 3px 1px rgba($primaryBlue, 0.5);
+        transition-timing-function: cubic-bezier(.4,0,.2,1);
+        transition-duration: .15s;
+      }
+    }
+  }
+}

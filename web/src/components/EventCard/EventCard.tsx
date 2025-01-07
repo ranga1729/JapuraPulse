@@ -1,4 +1,4 @@
-import styles from './EventCard.module.css'
+import styles from './EventCard.module.scss'
 import Image from '../../assets/event.jpg'
 import calendar from '../../assets/calendar.svg'
 import location from '../../assets/location.svg'
